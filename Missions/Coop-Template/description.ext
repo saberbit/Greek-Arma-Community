@@ -1,0 +1,127 @@
+//----------------------------Respawn And Spectator------------------------------//
+//
+respawnDelay = 9999999; // 9999999 or greater = No Respawn
+//Changes respawn, respawnDialog and respawnTemplates parameters.
+#include "CSSA3\CSSA3_header.hpp"
+
+// -------------------------Mission Details - Settings -----------------------------------//
+//
+overviewPicture = "photo\GreekCommunity.jpg"; // Visible when selecting mission
+loadScreen = "photo\GreekCommunity.jpg"; // Visible when loading mission
+author = CyDoN; // Author Name Visible When Loading Mission
+onLoadName = GAC Template - Grool V2; // Mission Name Visible When Loading Mission
+enableDebugConsole = 1; // In Game Debug Console
+ShowGPS = 0;
+showCompass = 1;
+showMap = 1;
+DisabledAI = true; //Disabled Ai Take Slots If No Players
+
+// -------------------------Game Type And Min - Max Players----------------------------------//
+//
+class Header
+{
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 30; // Max # of players the MISSION supports, not server slots
+};
+
+// -----------------------viewDistance Settings---------------------------------------//
+//
+#include "taw_vd\dialog.hpp" // viewDistance Settings
+
+class CfgFunctions
+{
+	#include "taw_vd\CfgFunctions.hpp" // viewDistance Settings
+};
+
+//-------------------------Mission Parameters in Editor -------------------------------//
+//
+class Params
+{
+    //
+	// class TimeOfDay
+	//{
+                // paramsArray[0]
+		//title = "    Time of Day";
+		//values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
+		//texts[] = {"00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00",//"12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"};
+		//default = 8;
+	//}; 
+	
+	class aimingAccuracy
+	{
+		//paramsArray[1]
+   		title = "Eustoxia [megaluterh timh  kaliterh skopeush - energeies gia perisoteri eustoxia]";
+    		values[] = {0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1};
+    		texts[] = {"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
+    		default = 0.2; //Default Timh Parametrou
+	};
+
+	class aimingShake
+	{
+		//paramsArray[2]
+   		title = "Sta8erothta Oplou kata thn bolh [megaluterh timh perisoterh sta8erothta]";
+    		values[] = {0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1};
+    		texts[] = {"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
+    		default = 0.2; //Default Timh Parametrou
+	};
+
+	class aimingSpeed
+	{
+		//paramsArray[3]
+   		title = "Taxuthta peristrofhs kai skopeushs[magaluterh timh perisoterh taxuthta skopeushs]";
+    		values[] = {0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1};
+    		texts[] = {"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
+    		default = 0.3; //Default Timh Parametrou
+	};
+
+	class spotDistance
+	{
+		//paramsArray[4]
+   		title = "Anagnorish stoxou [entos optikou kai akoustikou fasmatos [{akribia plhroforion} megaluterh timh perisoterh] akribia]";
+    		values[] = {0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1};
+    		texts[] = {"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
+    		default = 0.3; //Default Timh Parametrou
+	};
+
+	class spotTime
+	{
+		//paramsArray[5]
+   		title = "taxuthta Antidrashs [megaluterh timh taxuterh Antidrashs stis plhrofories kai ta pyra]";
+    		values[] = {0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1};
+    		texts[] = {"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
+    		default = 0.4; //Default Timh Parametrou
+	};
+
+	class courage 
+	{
+		//paramsArray[6]
+   		title = "8aros Omadas [megaluterh timh perisotero 8aros]";
+    		values[] = {0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1};
+    		texts[] = {"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
+    		default = 0.5; //Default Timh Parametrou
+	};
+
+	class reloadSpeed 
+	{
+		//paramsArray[7]
+   		title = "Ka8usterhsh Epanafortoshs Oplou [megaluterh timh taxuterh Epanafortosh]";
+    		values[] = {0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1};
+    		texts[] = {"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
+    		default = 0.5; //Default Timh Parametrou
+	};
+	
+};
+//
+// -----------------------Sounds Or Music In The Mission ----------------------------//
+//
+//class CfgSounds
+//{
+ //sounds[] = {};
+  //class niggah1
+  //{
+  //name = "niggah1";   // how the sound is referred to in the editor (e.g. trigger effects)
+  //sound[] = {"niggah1.ogg", 1, 1};   // filename, volume, pitch
+  // titles[] = {};
+ // };
+//};
