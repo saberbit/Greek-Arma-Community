@@ -9,12 +9,13 @@ respawnDelay = 9999999; // 9999999 or greater = No Respawn
 overviewPicture = "photo\GreekCommunity.jpg"; // Visible when selecting mission
 loadScreen = "photo\GreekCommunity.jpg"; // Visible when loading mission
 author = CyDoN; // Author Name Visible When Loading Mission
-onLoadName = GAC Template - Grool V2; // Mission Name Visible When Loading Mission
+onLoadName =  GAC Template - Grool V2; // Mission Name Visible When Loading Mission
 enableDebugConsole = 1; // In Game Debug Console
 ShowGPS = 0;
 showCompass = 1;
 showMap = 1;
-DisabledAI = true; //Disabled Ai Take Slots If No Players
+disabledAI = true; //Disabled Ai Take Slots If No Players
+disableChannels[]={0,1,2,3,4,5,6}; // Disable Chat Channels
 
 // -------------------------Game Type And Min - Max Players----------------------------------//
 //
