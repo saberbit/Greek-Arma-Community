@@ -23,8 +23,8 @@ enableSaving[false,false]; //Saving Progress Settings
 //
 #include "\task_force_radio\functions\common.sqf";
 if ((isServer) or (isDedicated)) then {
-  // tf_no_auto_long_range_radio = true;/////////////////////Give auto Longrange  Radios to Players
-   //publicVariable "tf_no_auto_long_range_radio";///////////                 ""             /////////////////
+   tf_no_auto_long_range_radio = true;/////////////////////Not auto Longrange  Radios to Players
+   publicVariable "tf_no_auto_long_range_radio";///////////                 ""             /////////////////
    tf_same_sw_frequencies_for_side = true;
    publicVariable "tf_same_sw_frequencies_for_side";
    tf_same_lr_frequencies_for_side = true;
@@ -58,7 +58,6 @@ if ((isServer) or (isDedicated)) then {
 
 //----------------------------------------AI Skill  Settings-------------------------------------//
 {
-//_x setskill ["TimeOfDay",(paramsArray select 0)];                //Set Time Of Day
 _x setskill ["aimingAccuracy",(paramsArray select 0)];      //Set AI aiming Accuracy
 _x setskill ["aimingShake",(paramsArray select 1)];          //Set AI aimingShake
 _x setskill ["aimingSpeed",(paramsArray select 2)];          //Set AI aimingSpeed
