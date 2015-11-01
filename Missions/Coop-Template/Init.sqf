@@ -15,11 +15,9 @@ player addRating 999999; // No Renegade Players From Teamkills
 enableSaving[false,false]; //Saving Progress Settings
 // ----------------------------------------Set Time Of Day------------------------------------//
 //
-//if isMultiplayer then { skipTime (paramsArray select 0)};
-//if isServer then {definedTime = (paramsArray select 0)};
+//if isMultiplayer then { skipTime (paramsArray select 7)};
+//if isServer then {definedTime = (paramsArray select 7)};
 //if isServer then {skipTime definedTime;};
-//
-//
 //
 //-------------------------------Task Force Radio Predefined Settings----------------------------//
 //
@@ -61,12 +59,12 @@ if ((isServer) or (isDedicated)) then {
 //----------------------------------------AI Skill  Settings-------------------------------------//
 {
 //_x setskill ["TimeOfDay",(paramsArray select 0)];                //Set Time Of Day
-_x setskill ["aimingAccuracy",(paramsArray select 1)];      //Set AI aiming Accuracy
-_x setskill ["aimingShake",(paramsArray select 2)];          //Set AI aimingShake
-_x setskill ["aimingSpeed",(paramsArray select 3)];          //Set AI aimingSpeed
-_x setskill ["spotDistance",(paramsArray select 4)];         //Set AIspotDistance
-_x setskill ["spotTime",(paramsArray select 5)];              //Set AIspotTime
-_x setskill ["courage",(paramsArray select 6)];              //Set AI courage
-_x setskill ["reloadSpeed",(paramsArray select 7)];      //Set AI reloadSpeed
+_x setskill ["aimingAccuracy",(paramsArray select 0)];      //Set AI aiming Accuracy
+_x setskill ["aimingShake",(paramsArray select 1)];          //Set AI aimingShake
+_x setskill ["aimingSpeed",(paramsArray select 2)];          //Set AI aimingSpeed
+_x setskill ["spotDistance",(paramsArray select 3)];         //Set AIspotDistance
+_x setskill ["spotTime",(paramsArray select 4)];              //Set AIspotTime
+_x setskill ["courage",(paramsArray select 5)];              //Set AI courage
+_x setskill ["reloadSpeed",(paramsArray select 6)];      //Set AI reloadSpeed
 
 } forEach allUnits;
