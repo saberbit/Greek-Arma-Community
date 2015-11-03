@@ -24,26 +24,27 @@ player addRating 999999; // No Renegade Players From Teamkills
 if ((isServer) or (isDedicated)) then {
    tf_no_auto_long_range_radio = true;/////////////////////Not auto Longrange  Radios to Players
    publicVariable "tf_no_auto_long_range_radio";///////////                 ""             /////////////////
-   tf_same_sw_frequencies_for_side = false;
+   tf_same_sw_frequencies_for_side = true;
    publicVariable "tf_same_sw_frequencies_for_side";
-   tf_same_lr_frequencies_for_side = false;
+   tf_same_lr_frequencies_for_side = true;
    publicVariable "tf_same_lr_frequencies_for_side";
+   //
    _settingsSwWest = false call TFAR_fnc_generateSwSettings;/////////////////////////////////////
-   _settingsSwWest set [2, ["101","102","103","104","105","106","107","108","109"]];////////////////////
+   _settingsSwWest set [2, ["101","102","103","104","105","106","107","108"]];////////////////////
    tf_freq_west = _settingsSwWest;////////////////////////////////////////////////////////////////WEST
    _settingsLrWest = false call TFAR_fnc_generateLrSettings;//////////////////////////////////////
    _settingsLrWest set [2, ["41","42","43","44","45","46","47","48"]];////////////////////
    tf_freq_west_lr = _settingsLrWest;///////////////////////////////////////////////////////////////////
    //
    _settingsSwEast = false call TFAR_fnc_generateSwSettings;////////////////////////////////////
-   _settingsSwEast set [2, ["201","202","203","204","205","206","207","208","209"]];///////////////////
+   _settingsSwEast set [2, ["201","202","203","204","205","206","207","208"]];///////////////////
    tf_freq_east = _settingsSwEast;////////////////////////////////////////////////////////////////EAST
    _settingsLrEast = false call TFAR_fnc_generateLrSettings;/////////////////////////////////////
    _settingsLrEast set [2,  ["51","52","53","54","55","56","57","58"]];//////////////////
    tf_freq_east_lr = _settingsLrEast;//////////////////////////////////////////////////////////////////
    //
    _settingsSwGuer = false call TFAR_fnc_generateSwSettings;/////////////////////////////////////
-   _settingsSwGuer set [2, ["301","302","303","304","305","306","307","308","309"]];////////////////////
+   _settingsSwGuer set [2, ["301","302","303","304","305","306","307","308"]];////////////////////
    tf_freq_guer = _settingsSwGuer;////////////////////////////////////////////////////////////////GUER
    _settingsLrGuer = false call TFAR_fnc_generateLrSettings;//////////////////////////////////////
    _settingsLrGuer set [2, ["61","62","63","64","65","66","67","68"]];////////////////////
